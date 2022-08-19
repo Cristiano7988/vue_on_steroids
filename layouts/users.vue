@@ -1,11 +1,19 @@
 <template>
     <div class="container">
-        <header>
-            <h1>Users Section</h1>
-        </header>
+        <Header />
         <nuxt />
     </div>
 </template>
+
+<script>
+import Header from "~/components/Header.vue";
+
+export default {
+    components: {
+        Header
+    }
+}
+</script>
 
 <style>
 .container {

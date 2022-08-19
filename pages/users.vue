@@ -1,9 +1,10 @@
 <template>
-    <div>
+    <section>
+        <h1>Users Section</h1>
         <input type="text" v-model="userId"/>
         <button @click="onLoadUser">Load User</button>
         <nuxt-child />
-    </div>
+    </section>
 </template>
 
 <script>
