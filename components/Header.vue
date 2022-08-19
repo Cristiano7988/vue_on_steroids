@@ -19,6 +19,7 @@
 
 <style scoped>
     .header {
+        font-family: Aboreto;
         display: flex;
         justify-content: center;
         align-items: center;

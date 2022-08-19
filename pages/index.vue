@@ -3,7 +3,7 @@
     <Header />
     <section class="container">
       <h1>Welcome to the main page!</h1>
-      <nuxt-link to="/admin">Admin</nuxt-link>
+      <nuxt-link to="/admin">dmin</nuxt-link>
     </section>
   </div>
 </template>
