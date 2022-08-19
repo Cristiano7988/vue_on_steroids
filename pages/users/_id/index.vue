@@ -1,5 +1,5 @@
 <template>
-    <h1>Hello, user {{ $route.params.id }}</h1>
+    <p>Hello, user! Your id is: {{ $route.params.id }}</p>
 </template>
 
 <script>
