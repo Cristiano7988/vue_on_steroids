@@ -2,14 +2,14 @@
   <div>
     <Title text="Get the latest tech news!" />
     <section class="featured-posts">
-      <nuxt-link v-for="(post, key) in posts" :key="key" :to="post.to">
+      <nuxt-link v-for="({texts, title, id, thumbnail}, key) in posts" :key="key" :to="'/post/'+id">
         <article class="post-preview">
           <div class="post-thumbnail">
-            <img :src="post.thumbnail" />
+            <img :src="thumbnail" />
           </div>
           <div class="post-content">
-            <h1>{{ post.title }}</h1>
-            <p>{{ post.text }}</p>
+            <h1>{{ title }}</h1>
+            <p>{{ texts[0].split('.')[0] }}.</p>
           </div>
         </article>
       </nuxt-link>
@@ -18,35 +18,18 @@
 </template>
 
 <script>
-import Header from '~/components/Header.vue';
+import posts from '~/data/posts.json';
+
 export default {
     data() {
       return {
-        posts: [
-          {
-            thumbnail: 'https://s.yimg.com/ny/api/res/1.2/4.YiYj1m4s6pMrIU8HpYYQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzODtjZj13ZWJw/https://s.yimg.com/os/creatr-uploaded-images/2022-02/3f209330-8db1-11ec-afd9-1652014d9db4',
-            title: 'Page Title 1',
-            text: 'Preview Text 1',
-            to: `/posts/${1}`
-          },
-          {
-            thumbnail: 'https://cdn.falauniversidades.com.br/wp-content/uploads/2020/09/02132947/danca-1.jpg',
-            title: 'Page Title 2',
-            text: 'Preview Text 2',
-            to: `/posts/${1}`
-          },
-        ]
+        posts
       }
-    },
-    components: { Header }
+    }
 }
 </script>
 
 <style scoped>
-.container {
-  font-family: 'Aboreto';
-}
-
 .featured-posts {
   display: flex;
 }
@@ -66,7 +49,6 @@ export default {
 }
 
 .post-thumbnail img {
-  width: 100%;
   position: relative;
   left: 0%;
 }
@@ -76,7 +58,6 @@ export default {
   background-color: rgba(999, 999, 999, .6);
   width: 100%;
   bottom: 0;
-  padding: 0 80px;
   margin: 40px 0;
   color: darkslategrey;
   box-shadow: 0px 0px 0px black;
@@ -93,11 +74,6 @@ export default {
   box-shadow: 1px 1px 35px black;
   text-shadow: 1px 1px 10px black;
   transition: box-shadow 1s, text-shadow .2s;
-}
-
-.post-content h1 {
-  font-family: 'Aboreto';
-  font-weight: bolder;
 }
 
 .post-content p {

@@ -4,9 +4,3 @@
         <nuxt />
     </div>
 </template>
-
-<style>
-.container {
-    text-align: center
-}
-</style>

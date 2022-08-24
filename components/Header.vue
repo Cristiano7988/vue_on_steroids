@@ -44,7 +44,6 @@ export default {
         color: white;
     }
     .nav-items {
-        list-style: none;
         padding: 0px;
         margin: 0;
         display: flex;
@@ -55,8 +54,8 @@ export default {
         display: block;
         padding: 20px;
         color: white;
-        text-decoration: none;
         transition: background 1s;
+        white-space: nowrap;
     }
     .background-primary .nav-items a:hover {
         background: lightseagreen;
