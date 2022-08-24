@@ -1,8 +1,7 @@
 <template>
     <div>
-        <Header />
+        <Title text="Posts" />
         <section class="posts-page">
-            <h1>Posts</h1>
             <ul class="posts-list">
                 <li>
                     <nuxt-link to="/posts/1">Do you know what is going on in China?</nuxt-link>

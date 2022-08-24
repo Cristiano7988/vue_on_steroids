@@ -1,10 +1,12 @@
 <template>
-    <section>
-        <h1>Admin Section</h1>
-        <input type="text" v-model="adminId"/>
-        <button @click="onLoadAdmin">Load Admin</button>
-        <nuxt-child />
-    </section>
+    <div>
+        <Title text="Admin Section" />
+        <section class="admin-page">
+            <input type="text" v-model="adminId"/>
+            <button @click="onLoadAdmin">Load Admin</button>
+            <nuxt-child />
+        </section>
+    </div>
 </template>
 
 <script>

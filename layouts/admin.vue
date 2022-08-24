@@ -1,19 +1,9 @@
 <template>
     <div class="container">
-        <Header />
+        <Header classes="background-secondary" />
         <nuxt />
     </div>
 </template>
-
-<script>
-import Header from "~/components/Header.vue";
-
-export default {
-    components: {
-        Header
-    }
-}
-</script>
 
 <style>
 .container {

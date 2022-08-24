@@ -1,8 +1,7 @@
 <template>
     <div>
-        <Header />
+        <Title :text="'Post ' + $route.params.id" />
         <section class="single-post-page">
-            <h1>Post {{ $route.params.id }}</h1>
             <span>Written by XXXX</span><br />
             <span>Published in XXXX</span>
             <hr />

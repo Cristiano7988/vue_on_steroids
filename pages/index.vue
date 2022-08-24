@@ -1,9 +1,6 @@
 <template>
   <div>
-    <Header />
-    <section class="container">
-      <h1>Get the latest tech news!</h1>
-    </section>
+    <Title text="Get the latest tech news!" />
     <section class="featured-posts">
       <nuxt-link v-for="(post, key) in posts" :key="key" :to="post.to">
         <article class="post-preview">
@@ -60,10 +57,6 @@ export default {
   }
 }
 
-@media screen {
-  
-}
-
 .post-preview {
   height: 300px;
   position: relative;
@@ -80,7 +73,7 @@ export default {
 
 .post-content {
   position: absolute;
-  background-color: rgba(999, 999, 999, .4);
+  background-color: rgba(999, 999, 999, .6);
   width: 100%;
   bottom: 0;
   padding: 0 80px;
