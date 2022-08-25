@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <section>
         <Header />
         <h1>An error ocurred, we're sorry!</h1>
-    </div>
+    </section>
 </template>
 
 <script>

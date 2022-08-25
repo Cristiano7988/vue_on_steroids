@@ -2,7 +2,7 @@
   <div>
     <Title text="Get the latest tech news!" />
     <section class="featured-posts">
-      <nuxt-link v-for="({texts, title, id, thumbnail}, key) in posts" :key="key" :to="'/post/'+id">
+      <nuxt-link v-for="({texts, title, id, thumbnail}, key) in posts" :key="key" :to="'/posts/'+id">
         <article class="post-preview">
           <div class="post-thumbnail">
             <img :src="thumbnail" />
@@ -31,7 +31,8 @@ export default {
 
 <style scoped>
 .featured-posts {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media screen and (max-width: 1080px) {

@@ -32,5 +32,11 @@ export default {
         margin: 5px;
         font-family: system-ui;
     }
+    .posts-list a:hover {
+        background: chocolate;
+        color: white;
+        letter-spacing: 5px;
+        transition: background 1s, color .1s, letter-spacing 10s;
+    }
 </style>
 <
