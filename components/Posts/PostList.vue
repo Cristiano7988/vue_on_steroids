@@ -1,20 +1,34 @@
 <template>
     <ul class="posts-list">
         <li v-for="(post, index) in posts" :key="index">
-            <nuxt-link :to="'/posts/'+post.id">{{ post.title }}</nuxt-link>
+            <PostPreview
+                :is-admin="isAdmin"
+                :post="post"
+                :preview="false"
+            >
+                {{ post.title }}
+            </PostPreview>
         </li>
     </ul>
 </template>
 
 <script>
 import posts from '~/data/posts.json';
+import PostPreview from './PostPreview.vue';
 
 export default {
     data() {
         return {
             posts
+        };
+    },
+    props: {
+        isAdmin: {
+            type: Boolean,
+            default: false
         }
-    }
+    },
+    components: { PostPreview }
 }
 </script>
 

@@ -4,14 +4,14 @@
       <Title text="Get the latest tech news!" />
     </div>
     <section class="featured-posts">
-      <PostPreview v-for="post in posts" :post="post" :key="key" />
+      <PostPreview v-for="(post, key) in posts" :post="post" :key="key" />
     </section>
   </div>
 </template>
 
 <script>
 import posts from '~/data/posts.json';
-import PostPreview from '@/components/Posts/PostPreview.vue';
+import PostPreview from '@/components/Posts/PostPreview';
 
 export default {
     data() {

@@ -4,12 +4,12 @@
         <hr />
         <div class="create-post">
             <h2>Create Post</h2>
-            <button @click="$router.push('/admin/new-post')" >Create Post</button>
+            <button @click="$router.push('/admin/post')" >Create Post</button>
         </div>
         <hr />
         <div class="post-list">
             <h2>List of Posts</h2>
-            <PostList />
+            <PostList isAdmin />
         </div>
     </div>
 </template>

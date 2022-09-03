@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="'/posts/' + post.id">
-    <article class="post-preview">
+  <nuxt-link :to="postLink">
+    <article v-if="preview" class="post-preview">
       <div class="post-thumbnail">
         <img :src="post.thumbnail" />
       </div>
@@ -9,6 +9,7 @@
         <p>{{ post.texts[0]?.split('.')[0] }}.</p>
       </div>
     </article>
+    <span v-else><slot /></span>
   </nuxt-link>
 </template>
 
@@ -18,7 +19,20 @@ export default {
         post: {
             type: Object,
             default: {}
+        },
+        preview: {
+          type: Boolean,
+          default: true
+        },
+        isAdmin: {
+          type: Boolean,
+          default: false
         }
+    },
+    computed: {
+      postLink() {
+        return this.isAdmin ? '/admin/post/' + this.post.id : '/posts/' + this.post.id
+      }
     }
 }
 </script>
